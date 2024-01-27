@@ -4,8 +4,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        'docker build -t my-flask-app .'
-        'docker tag my-flask-app $DOCKER_BFLASK_IMAGE'
+        sh 'docker build -t my-flask-app .'
+        sh 'docker tag my-flask-app $DOCKER_BFLASK_IMAGE'
       }
     }
     stage('Test') {
