@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-       sh 'echo "Welcome to SJP"'
+       sh 'echo Welcome to SJP'
        sh 'pwd'
        sh 'ls'
        sh 'docker build -t my-flask-app .'
