@@ -2,15 +2,11 @@ pipeline {
   agent any
 
   stages {
-    stage('Test') {
-      steps {
-        sh 'echo "Welcome to SJP"'
-        sh 'pwd'
-        sh 'ls'
-      }
-    }
     stage('Build') {
       steps {
+       sh 'echo "Welcome to SJP"'
+       sh 'pwd'
+       sh 'ls'
        sh 'docker build -t my-flask-app .'
        sh 'docker tag my-flask-app $DOCKER_BFLASK_IMAGE'
       }
