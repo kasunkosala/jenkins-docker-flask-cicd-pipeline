@@ -5,6 +5,8 @@ pipeline {
     stage('Test') {
       steps {
         sh 'echo "Welcome to SJP"'
+        sh 'pwd'
+        sh 'ls'
       }
     }
     stage('Build') {
