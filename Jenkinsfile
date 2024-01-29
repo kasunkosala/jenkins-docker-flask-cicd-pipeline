@@ -2,6 +2,11 @@ pipeline {
   agent any
 
   stages {
+    stage('Test') {
+      steps {
+        sh 'echo "Welcome to SJP"'
+      }
+    }
     stage('Build') {
       steps {
        sh 'docker build -t my-flask-app .'
